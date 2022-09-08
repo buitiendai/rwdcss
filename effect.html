@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Effect</title>
+</head>
+<style>
+    div.background {
+        background: url(https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2021/05/27100235/klematis.jpg) repeat;
+        border: 2px solid black;
+    }
+    div.transbox {
+        margin: 30px;
+        background: rgba(225, 225, 225, 0.6);
+        border: 1px solid black;
+        position: relative;
+        top: 30px;
+        padding: 10px;
+    }
+    .element {
+        height: 250px;
+        width: 250px;
+        margin: auto;
+        background-color: lime;
+        animation-name: stretch;
+        animation-duration: 2.0s;
+        animation-timing-function: ease-out;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-play-state: running;
+    }
+    @keyframes stretch {
+        0% {
+            transform: scale(.5);
+            background-color: green;
+            border-radius: 100%;
+        }
+        50% {
+            background-color: orange;
+        }
+        100% {
+            transform: scale(2.0);
+            background-color: red;
+        }
+    }
+    body, html {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .pulse {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translate(-505, -50%);
+        width: 100px;
+        height: 100px;
+        background: #33ff00;
+        border: 2px solid #33ff00;
+        border-radius: 50%;
+        box-sizing: border-box;
+        box-shadow: 0 0 0 36px #45237a,
+                    0 0 0 40px #56ff00;
+    }
+    .pulse::before, .pulse::after {
+        content: "";
+        position: absolute;
+        left: -30px;
+        top: -30px;
+        right: -30px;
+        bottom: -30px;
+        border: 2px solid #33ff00;
+        border-radius: 50%;
+        animation: animate 2s linear infinite;
+    }
+    .pulse::after {
+        animation-delay: 1s;
+    }
+    @keyframes animate {
+        0% {
+            transform: scale(2.0);
+        }
+        100% {
+            transform: scale(0.7);
+        }
+    }
+</style>
+<body>
+    <div class="background">
+       <div class="transbox">
+            <p>Xin chào mọi người, đây là bài thực hành cho CSS EFFECT</p>
+       </div>
+    </div>
+    <div class="element"></div>
+    <div class="pulse"></div>
+</body>
+</html>

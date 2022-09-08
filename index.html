@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Effect</title>
+</head>
+<style>
+    p::first-letter {
+        color: blueviolet;
+        font-size: xx-large;
+    }
+    p::first-line {
+        color: red;
+        font-variant: small-caps;
+    }
+    div::first-letter {
+        color: blue;
+        font-size: xx-large;
+    }
+    div.icon::before {
+        content: url(https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2021/05/26102128/smiley.gif);
+        position: relative;
+        top: 10px;
+        right: 5px;
+        padding-left: 20px;
+    }
+    div.icon::after {
+        content: url(https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2021/05/26102128/smiley.gif);
+        position: relative;
+        top: 10px;
+        left: 5px;
+    }
+    div {
+        background: rgb(76, 175, 80);
+        padding: 10px;
+    }
+    div.first {
+        background: rgba(76, 175, 80, 0.1);
+    }
+    div.second {
+        background: rgba(76, 175, 80, 0.3);
+    }
+    div.third {
+        background: rgba(76, 175, 80, 0.6);
+        width: 200px;
+        height: 100px;
+        transition: width 1s, height 2s;
+    }
+    div.third:hover {
+        width: 500px;
+        height: 500px;
+    }
+    #div1 {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        animation-name: example;
+        animation-duration: 2s;
+        animation-iteration-count: 10;
+        animation-direction: alternate-reverse;
+        border-radius: 20px;
+        transition: width 1s, height 1s, transform 1s;
+        position: relative;
+    }
+    #div1:hover {
+        width: 300px;
+        height: 300px;
+        transform: rotate(360deg);
+        background-color: red;
+
+    }
+    @keyframes example {
+        0% {background-color: gold; top: 0px; left: 0px;}
+        25% {background-color: violet; left: 500px; top: 0px;}
+        50% {background-color: rgb(4, 168, 39); left: 500px; top: 100px;}
+        75% {background-color: rgb(33, 7, 180); left: 0px; top: 100px;}
+        100% {background-color: rgb(250, 10, 10); left: 0px; top: 0px;}
+    }
+</style>
+<body>
+    <p>ThinkPad T14 Gen 3 i7/16GB/1TB là laptop doanh nhân 14inch bền bỉ và mạnh mẽ nhờ trang bị thế hệ chip xử lý và đồ họa Intel mới nhất, được thiết kế trong khung máy bền bỉ và thân thiện với môi trường, sở hữu màn hình 16:10 đạt tới 84% tỉ lệ màn hình - thân máy cân bằng tuyệt đẹp. Bộ nhớ và ổ cứng xử lý nhanh chóng, kết nối WiFi 6E linh hoạt. Dễ dàng đồng hành và duy trì năng suất công việc bất kể nơi nào bạn đến.</p>
+    <div class="icon">You can use the ::first-letter pseudo-element to add a special effect to the first character of a text!</div>
+    <h1>Transparent</h1>
+    <p>With RGBA color values:</p>
+    <div class="first"><p>10% opacity</p></div>
+    <div class="second"><p>30% opacity</p></div>
+    <div class="third"><p>60% opacity</p></div>
+    <div><p>100% opacity</p></div>
+    <div id="div1"></div>
+</body>
+</html>
