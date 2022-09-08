@@ -10,40 +10,53 @@
     * {
         box-sizing: border-box;
     }
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
     .slide {
         width: 25%;
         float: left;
         padding: 10px;
-        height: 400px;
+        height: 30%;
+    }
+    .slide div {
+        border: 1px solid gray;
     }
     .slide img {
-        width: 100%;
-        height: 350px;
+        width: 100%;    
+        height: 100%;
     }
     .slide p {
         height: 50px;
+        padding: 10px;
     }
-    @media screen and (max-width: 768px) {
+    div h1 {
+        padding: 10px;
+    }
+    .note p {
+        padding: 10px;
+    }
+    @media screen and (max-width: 700px) {
         .slide {
             width: 50%;
-            height: 340px;
+            height: 30%;
         }
         .slide img {
             width: 100%;
-            height: 300px;
+            height: 100%;
         }
         .slide p {
             height: 40px;
         }
     }
-    @media screen and (max-width: 576px) {
+    @media screen and (max-width: 500px) {
         .slide {
             width: 100%;
-            height: 400px;
+            height: 40%;
         }
         .slide img {
             width: 100%;
-            height: 350px;
+            height: 100%;
         }
         .slide p {
             height: 50px;
@@ -52,21 +65,37 @@
 
 </style>
 <body>
-    <div class="slide">
-        <img src="images/anh1.jpg" alt="ảnh 1">
-        <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+    <div>
+        <h1>Responsive Web Design</h1>
     </div>
     <div class="slide">
-        <img src="images/anh2.jpg" alt="ảnh 2">
-        <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+        <div>
+            <img src="images/anh2.jpg" alt="ảnh 1">
+            <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+        </div>
     </div>
     <div class="slide">
-        <img src="images/anh23.jpg" alt="ảnh 3">
-        <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+        <div>
+            <img src="images/anh2.jpg" alt="ảnh 23">
+            <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+        </div>
     </div>
     <div class="slide">
-        <img src="images/anh4.jpg" alt="ảnh 4">
-        <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+        <div>
+            <img src="images/anh2.jpg" alt="ảnh 3">
+            <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+        </div>
+    </div>
+    <div class="slide">
+        <div>
+            <img src="images/anh2.jpg" alt="ảnh 4">
+            <p>50 Hình ảnh đẹp thiên nhiên, ảnh phong cảnh đẹp 3D chất lượng 4K</p>
+        </div>
+    </div>
+    <div class="note">
+        <p>
+            Với các màn hình có độ rộng lớn hơn 700px thì hiển thị 4 ảnh trên cùng một dòng. Với các màn hình nhỏ hơn 700px thì hiển thị 2 ảnh trên cùng một dòng. Với các màn hình nhỏ hơn 500px thì hiển thị 1 ảnh trên một dòng.
+        </p>
     </div>
 
 </body>
