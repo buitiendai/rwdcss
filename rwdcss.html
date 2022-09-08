@@ -37,12 +37,31 @@
         clear: both;
         background-color: rgb(233, 92, 146);
     }
+    @media screen and (max-width: 768px) {
+        #content {
+            width: 80%;
+            background-color: rgb(54, 207, 156);
+        }
+        #right {
+            display: none;
+        }
+    }
+    @media screen and (max-width: 576px) {
+        #header {
+            height: 60px;
+            background-color: rgb(241, 97, 97);
+        }
+        #left, #content, #right {
+            width: 100%;
+            display: block;
+        }
+    }
 </style>
 <body>
-    <div id="header"></div>
-    <div id="left"></div>
-    <div id="content"></div>
-    <div id="right"></div>
-    <div id="footer"></div>
+    <div id="header">Header</div>
+    <div id="left">Left</div>
+    <div id="content">Content</div>
+    <div id="right">Right</div>
+    <div id="footer">Footer</div>
 </body>
 </html>
