@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide Ảnh Responsive</title>
+    <title>Slide Images Responsive</title>
 </head>
 <style>
     * {
@@ -18,6 +18,10 @@
         float: left;
         padding: 10px;
         height: 30%;
+        opacity: 0.8;
+    }
+    .slide:hover {
+        opacity: 1;
     }
     .slide div {
         border: 1px solid gray;
@@ -36,7 +40,7 @@
     .note p {
         padding: 10px;
     }
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 768px) {
         .slide {
             width: 50%;
             height: 30%;
@@ -49,7 +53,7 @@
             height: 40px;
         }
     }
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 574px) {
         .slide {
             width: 100%;
             height: 40%;
@@ -66,7 +70,7 @@
 </style>
 <body>
     <div>
-        <h1>Responsive Web Design</h1>
+        <h1>Responsive Images Design</h1>
     </div>
     <div class="slide">
         <div>
